@@ -43,5 +43,6 @@
 	<classpathentry exported="true" kind="lib" path="C:/Users/choshika/Dropbox/ORACLE/Workshop Devops ATP/ojdbc8-full/simplefan.jar"/>
 	<classpathentry exported="true" kind="lib" path="C:/Users/choshika/Dropbox/ORACLE/Workshop Devops ATP/ojdbc8-full/ucp.jar"/>
 	<classpathentry exported="true" kind="lib" path="C:/Users/choshika/Dropbox/ORACLE/Workshop Devops ATP/ojdbc8-full/xdb.jar"/>
+	<classpathentry kind="lib" path="pom.xml"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
