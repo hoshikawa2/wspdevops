@@ -40,80 +40,80 @@
 			<scope>test</scope>
 		</dependency>             
 
+
               <dependency>
                      <groupId>org.springframework.boot</groupId>
                      <artifactId>oraclepki</artifactId>
                                    <version>1.0</version>
                                    <scope>system</scope>
-                        <systemPath>${basedir}\src\main\resources\wspdevops\oraclepki.jar</systemPath>
+                        <systemPath>${basedir}/src/main/resources/wspdevops/oraclepki.jar</systemPath>
               </dependency>
               <dependency>
                      <groupId>org.springframework.boot</groupId>
                      <artifactId>osdt_cert</artifactId>
                                    <version>1.0</version>
                                    <scope>system</scope>
-                     <systemPath>${basedir}\src\main\resources\wspdevops\osdt_cert.jar</systemPath>
+                     <systemPath>${basedir}/src/main/resources/wspdevops/osdt_cert.jar</systemPath>
               </dependency>
               <dependency>
                      <groupId>org.springframework.boot</groupId>
                      <artifactId>osdt_core</artifactId>
                                    <version>1.0</version>
                                    <scope>system</scope>
-                     <systemPath>${basedir}\src\main\resources\wspdevops\osdt_core.jar</systemPath>
+                     <systemPath>${basedir}/src/main/resources/wspdevops/osdt_core.jar</systemPath>
               </dependency>
               <dependency>
                      <groupId>org.springframework.boot</groupId>
                      <artifactId>ojdbc8</artifactId>
                                    <version>1.0</version>
                                    <scope>system</scope>      
-                     <systemPath>${basedir}\src\main\resources\wspdevops\ojdbc8.jar</systemPath>
+                     <systemPath>${basedir}/src/main/resources/wspdevops/ojdbc8.jar</systemPath>
               </dependency>
               <dependency>
                      <groupId>org.springframework.boot</groupId>
                      <artifactId>orai18n</artifactId>
                                    <version>1.0</version>
                                    <scope>system</scope>
-                     <systemPath>${basedir}\src\main\resources\wspdevops\orai18n.jar</systemPath>
+                     <systemPath>${basedir}/src/main/resources/wspdevops/orai18n.jar</systemPath>
               </dependency>
               <dependency>
                      <groupId>org.springframework.boot</groupId>
                      <artifactId>ons</artifactId>
                                    <version>1.0</version>
                                    <scope>system</scope>
-                     <systemPath>${basedir}\src\main\resources\wspdevops\ons.jar</systemPath>
+                     <systemPath>${basedir}/src/main/resources/wspdevops/ons.jar</systemPath>
               </dependency>
               <dependency>
                      <groupId>org.springframework.boot</groupId>
                      <artifactId>simplefan</artifactId>
                                    <version>1.0</version>
                                    <scope>system</scope>
-                     <systemPath>${basedir}\src\main\resources\wspdevops\simplefan.jar</systemPath>
+                     <systemPath>${basedir}/src/main/resources/wspdevops/simplefan.jar</systemPath>
               </dependency>
               <dependency>
                      <groupId>org.springframework.boot</groupId>
                      <artifactId>ucp</artifactId>
                                    <version>1.0</version>
                                    <scope>system</scope>
-                     <systemPath>${basedir}\src\main\resources\wspdevops\ucp.jar</systemPath>
+                     <systemPath>${basedir}/src/main/resources/wspdevops/ucp.jar</systemPath>
               </dependency>
               <dependency>
                      <groupId>org.springframework.boot</groupId>
                      <artifactId>xdb</artifactId>
                                    <version>1.0</version>
                                    <scope>system</scope>
-                     <systemPath>${basedir}\src\main\resources\wspdevops\xdb.jar</systemPath>
+                     <systemPath>${basedir}/src/main/resources/wspdevops/xdb.jar</systemPath>
               </dependency>
-
-
 	</dependencies>
 
 	<build>
 		<plugins>
+					
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
-			
+									   									    						
 			<!-- For Developer Cloud Service -->
 			<plugin>
 			    <artifactId>maven-assembly-plugin</artifactId>
