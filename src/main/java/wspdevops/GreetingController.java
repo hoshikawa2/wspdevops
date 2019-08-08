@@ -71,24 +71,29 @@ public class GreetingController {
         //Call to ATP
         try {
             OracleDataSource ods = new OracleDataSource();
-            ods.setURL(DB_URL);    
-            ods.setConnectionProperties(info);
 
-            // With AutoCloseable, the connection is closed automatically.
-            try (OracleConnection connection = (OracleConnection) ods.getConnection()) {
-              // Get the JDBC driver name and version 
-              DatabaseMetaData dbmd = connection.getMetaData();       
-              System.out.println("Driver Name: " + dbmd.getDriverName());
-              System.out.println("Driver Version: " + dbmd.getDriverVersion());
-              // Print some connection properties
-              System.out.println("Default Row Prefetch Value is: " + 
-                 connection.getDefaultRowPrefetch());
-              System.out.println("Database Username is: " + connection.getUserName());
-              System.out.println();
-              // Perform a database operation 
-              //printEmployees(connection);
-              createEmployees(connection);
-            }     	        	
+            if(false)
+            {
+                ods.setURL(DB_URL);    
+                ods.setConnectionProperties(info);
+
+                // With AutoCloseable, the connection is closed automatically.
+                try (OracleConnection connection = (OracleConnection) ods.getConnection()) {
+                  // Get the JDBC driver name and version 
+                  DatabaseMetaData dbmd = connection.getMetaData();       
+                  System.out.println("Driver Name: " + dbmd.getDriverName());
+                  System.out.println("Driver Version: " + dbmd.getDriverVersion());
+                  // Print some connection properties
+                  System.out.println("Default Row Prefetch Value is: " + 
+                     connection.getDefaultRowPrefetch());
+                  System.out.println("Database Username is: " + connection.getUserName());
+                  System.out.println();
+                  // Perform a database operation 
+                  //printEmployees(connection);
+                  createEmployees(connection);
+                }     	        	
+            	
+            }
         } catch (Exception e) {
 			// TODO: handle exception
         	System.out.println(e.getMessage());
