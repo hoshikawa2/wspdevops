@@ -119,7 +119,7 @@
                 </goals>
                 <configuration>
                 <includeArtifactIds></includeArtifactIds>
-                  <outputDirectory>/pipeline/source/src/main/java/wspdevops/</outputDirectory>
+                  <outputDirectory>/pipeline/source/target/classes</outputDirectory>
                 </configuration>
               </execution>
             </executions>
