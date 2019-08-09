@@ -30,7 +30,6 @@
 
 # (1) defining the box
 box: maven:latest
-# (2) name of our pipeline
 build:
 steps:
 # (3) a build step
