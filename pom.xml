@@ -38,76 +38,75 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
-		</dependency>
+		</dependency>         
 		
-              <dependency>
+             <dependency>
                      <groupId>oracle.jdbc.pool</groupId>
                      <artifactId>oraclepki</artifactId>
                                    <version>1.0</version>
                                    <scope>system</scope>
-                        <systemPath>${basedir}\src\main\resources\wspdevops\oraclepki.jar</systemPath>
+                        <systemPath>${basedir}/src/main/resources/wspdevops/oraclepki.jar</systemPath>
               </dependency>
               <dependency>
                      <groupId>oracle.jdbc.pool</groupId>
                      <artifactId>osdt_cert</artifactId>
                                    <version>1.0</version>
                                    <scope>system</scope>
-                     <systemPath>${basedir}\src\main\resources\wspdevops\osdt_cert.jar</systemPath>
+                     <systemPath>${basedir}/src/main/resources/wspdevops/osdt_cert.jar</systemPath>
               </dependency>
               <dependency>
                      <groupId>oracle.jdbc.pool</groupId>
                      <artifactId>osdt_core</artifactId>
                                    <version>1.0</version>
                                    <scope>system</scope>
-                     <systemPath>${basedir}\src\main\resources\wspdevops\osdt_core.jar</systemPath>
+                     <systemPath>${basedir}/src/main/resources/wspdevops/osdt_core.jar</systemPath>
               </dependency>
               <dependency>
                      <groupId>oracle.jdbc.pool</groupId>
                      <artifactId>ojdbc8</artifactId>
                                    <version>1.0</version>
                                    <scope>system</scope>      
-                     <systemPath>${basedir}\src\main\resources\wspdevops\ojdbc8.jar</systemPath>
+                     <systemPath>${basedir}/src/main/resources/wspdevops/ojdbc8.jar</systemPath>
               </dependency>
               <dependency>
                      <groupId>oracle.jdbc.pool</groupId>
                      <artifactId>orai18n</artifactId>
                                    <version>1.0</version>
                                    <scope>system</scope>
-                     <systemPath>${basedir}\src\main\resources\wspdevops\orai18n.jar</systemPath>
+                     <systemPath>${basedir}/src/main/resources/wspdevops/orai18n.jar</systemPath>
               </dependency>
               <dependency>
                      <groupId>oracle.jdbc.pool</groupId>
                      <artifactId>ons</artifactId>
                                    <version>1.0</version>
                                    <scope>system</scope>
-                     <systemPath>${basedir}\src\main\resources\wspdevops\ons.jar</systemPath>
+                     <systemPath>${basedir}/src/main/resources/wspdevops/ons.jar</systemPath>
               </dependency>
               <dependency>
                      <groupId>oracle.jdbc.pool</groupId>
                      <artifactId>simplefan</artifactId>
                                    <version>1.0</version>
                                    <scope>system</scope>
-                     <systemPath>${basedir}\src\main\resources\wspdevops\simplefan.jar</systemPath>
+                     <systemPath>${basedir}/src/main/resources/wspdevops/simplefan.jar</systemPath>
               </dependency>
               <dependency>
                      <groupId>oracle.jdbc.pool</groupId>
                      <artifactId>ucp</artifactId>
                                    <version>1.0</version>
                                    <scope>system</scope>
-                     <systemPath>${basedir}\src\main\resources\wspdevops\ucp.jar</systemPath>
+                     <systemPath>${basedir}/src/main/resources/wspdevops/ucp.jar</systemPath>
               </dependency>
               <dependency>
                      <groupId>oracle.jdbc.pool</groupId>
                      <artifactId>xdb</artifactId>
                                    <version>1.0</version>
                                    <scope>system</scope>
-                     <systemPath>${basedir}\src\main\resources\wspdevops\xdb.jar</systemPath>
-              </dependency>		
-		             
+                     <systemPath>${basedir}/src/main/resources/wspdevops/xdb.jar</systemPath>
+              </dependency>
+		    
 	</dependencies>
 
 	<build>
-    
 		<plugins>
 				
 			<plugin>
