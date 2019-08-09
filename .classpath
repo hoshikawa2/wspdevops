@@ -1,14 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry exported="true" kind="lib" path="C:/Users/choshika/Dropbox/ORACLE/Workshop Devops ATP/ojdbc8-full/ojdbc8.jar"/>
-	<classpathentry exported="true" kind="lib" path="C:/Users/choshika/Dropbox/ORACLE/Workshop Devops ATP/ojdbc8-full/ons.jar"/>
-	<classpathentry exported="true" kind="lib" path="C:/Users/choshika/Dropbox/ORACLE/Workshop Devops ATP/ojdbc8-full/oraclepki.jar"/>
-	<classpathentry exported="true" kind="lib" path="C:/Users/choshika/Dropbox/ORACLE/Workshop Devops ATP/ojdbc8-full/orai18n.jar"/>
-	<classpathentry exported="true" kind="lib" path="C:/Users/choshika/Dropbox/ORACLE/Workshop Devops ATP/ojdbc8-full/osdt_cert.jar"/>
-	<classpathentry exported="true" kind="lib" path="C:/Users/choshika/Dropbox/ORACLE/Workshop Devops ATP/ojdbc8-full/osdt_core.jar"/>
-	<classpathentry exported="true" kind="lib" path="C:/Users/choshika/Dropbox/ORACLE/Workshop Devops ATP/ojdbc8-full/simplefan.jar"/>
-	<classpathentry exported="true" kind="lib" path="C:/Users/choshika/Dropbox/ORACLE/Workshop Devops ATP/ojdbc8-full/ucp.jar"/>
-	<classpathentry exported="true" kind="lib" path="C:/Users/choshika/Dropbox/ORACLE/Workshop Devops ATP/ojdbc8-full/xdb.jar"/>
 	<classpathentry exported="true" kind="con" path="org.eclipse.m2e.MAVEN2_CLASSPATH_CONTAINER">
 		<attributes>
 			<attribute name="maven.pomderived" value="true"/>
