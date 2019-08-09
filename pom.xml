@@ -104,8 +104,6 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-
-
 		    
 	</dependencies>
 
@@ -117,9 +115,11 @@
   <artifactId>spring-boot-maven-plugin</artifactId>
   <configuration>
     <includeSystemScope>true</includeSystemScope>
+    <outputDirectory>/src/main/resources/wspdevops</outputDirectory>
   </configuration>
 </plugin>
-      				
+
+
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
