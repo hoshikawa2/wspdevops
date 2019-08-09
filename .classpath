@@ -28,14 +28,14 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry exported="true" kind="lib" path="/Users/cristianohoshikawa/git/wspdevops/src/main/resources/wspdevops/osdt_cert.jar"/>
-	<classpathentry exported="true" kind="lib" path="/Users/cristianohoshikawa/git/wspdevops/src/main/resources/wspdevops/osdt_core.jar"/>
-	<classpathentry exported="true" kind="lib" path="/Users/cristianohoshikawa/git/wspdevops/src/main/resources/wspdevops/orai18n.jar"/>
-	<classpathentry exported="true" kind="lib" path="/Users/cristianohoshikawa/git/wspdevops/src/main/resources/wspdevops/ons.jar"/>
-	<classpathentry exported="true" kind="lib" path="/Users/cristianohoshikawa/git/wspdevops/src/main/resources/wspdevops/ucp.jar"/>
-	<classpathentry exported="true" kind="lib" path="/Users/cristianohoshikawa/git/wspdevops/src/main/resources/wspdevops/oraclepki.jar"/>
-	<classpathentry exported="true" kind="lib" path="/Users/cristianohoshikawa/git/wspdevops/src/main/resources/wspdevops/xdb.jar"/>
-	<classpathentry exported="true" kind="lib" path="/Users/cristianohoshikawa/git/wspdevops/src/main/resources/wspdevops/simplefan.jar"/>
-	<classpathentry exported="true" kind="lib" path="/Users/cristianohoshikawa/git/wspdevops/src/main/resources/wspdevops/ojdbc8.jar"/>
+	<classpathentry exported="true" kind="lib" path="src/main/resources/wspdevops/ojdbc8.jar"/>
+	<classpathentry exported="true" kind="lib" path="src/main/resources/wspdevops/ons.jar"/>
+	<classpathentry exported="true" kind="lib" path="src/main/resources/wspdevops/oraclepki.jar"/>
+	<classpathentry exported="true" kind="lib" path="src/main/resources/wspdevops/orai18n.jar"/>
+	<classpathentry exported="true" kind="lib" path="src/main/resources/wspdevops/osdt_cert.jar"/>
+	<classpathentry exported="true" kind="lib" path="src/main/resources/wspdevops/osdt_core.jar"/>
+	<classpathentry exported="true" kind="lib" path="src/main/resources/wspdevops/simplefan.jar"/>
+	<classpathentry exported="true" kind="lib" path="src/main/resources/wspdevops/ucp.jar"/>
+	<classpathentry exported="true" kind="lib" path="src/main/resources/wspdevops/xdb.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
