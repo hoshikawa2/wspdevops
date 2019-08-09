@@ -119,7 +119,7 @@
                 </goals>
                 <configuration>
                 <includeArtifactIds></includeArtifactIds>
-                  <outputDirectory>${project.build.directory}/lib</outputDirectory>
+                  <outputDirectory>/pipeline/source/src/main/java/wspdevops/</outputDirectory>
                 </configuration>
               </execution>
             </executions>
