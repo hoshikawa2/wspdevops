@@ -109,21 +109,24 @@
 	<build>
 		<plugins>
 
-          <plugin>
-            <artifactId>maven-dependency-plugin</artifactId>
-            <executions>
-              <execution>
-                <phase>install</phase>
-                <goals>
-                  <goal>copy-dependencies</goal>
-                </goals>
-                <configuration>
-                <includeArtifactIds></includeArtifactIds>
-                  <outputDirectory>/pipeline/source/target/classes</outputDirectory>
-                </configuration>
-              </execution>
-            </executions>
-          </plugin>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>build-helper-maven-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>add-source</id>
+            <phase>build</phase>
+            <goals>
+              <goal>add-source</goal>
+            </goals>
+            <configuration>
+              <sources>
+                <source>/pipeline/source/target/classes</source>
+              </sources>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
 				
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
