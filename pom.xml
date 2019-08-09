@@ -109,27 +109,18 @@
 
 	<build>
 		<plugins>
-
+		
 <plugin>
   <groupId>org.springframework.boot</groupId>
   <artifactId>spring-boot-maven-plugin</artifactId>
   <configuration>
     <includeSystemScope>true</includeSystemScope>
-    <outputDirectory>${basedir}/src/main/java/wspdevops/</outputDirectory>
   </configuration>
-</plugin>
-
+</plugin>		
 
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
-				<executions>
-					<execution>
-						<goals>
-							<goal>repackage</goal>
-						</goals>
-					</execution>
-				</executions>
 			</plugin>
 						    									   									    						
 			<!-- For Developer Cloud Service -->
