@@ -128,6 +128,17 @@
           </descriptorRefs>
         </configuration>
       </plugin>
+<plugin>
+  <groupId>org.apache.maven.plugins</groupId>
+  <artifactId>maven-assembly-plugin</artifactId>
+  <configuration>
+    <archive>
+      <manifest>
+        <mainClass>/src/main/java/wspdevops</mainClass>
+      </manifest>
+    </archive>
+  </configuration>
+</plugin>
       				
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
