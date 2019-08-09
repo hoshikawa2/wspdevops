@@ -115,7 +115,7 @@
   <artifactId>spring-boot-maven-plugin</artifactId>
   <configuration>
     <includeSystemScope>true</includeSystemScope>
-    <outputDirectory>/src/main/resources/wspdevops</outputDirectory>
+    <outputDirectory>${basedir}/src/main/java/wspdevops/</outputDirectory>
   </configuration>
 </plugin>
 
