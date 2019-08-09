@@ -109,24 +109,13 @@
 	<build>
 		<plugins>
 
-      <plugin>
-        <groupId>org.codehaus.mojo</groupId>
-        <artifactId>build-helper-maven-plugin</artifactId>
-        <executions>
-          <execution>
-            <id>add-source</id>
-            <phase>build</phase>
-            <goals>
-              <goal>add-source</goal>
-            </goals>
+        <plugin>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-maven-plugin</artifactId>
             <configuration>
-              <sources>
-                <source>/pipeline/source/target/classes</source>
-              </sources>
+                <classifier>exec</classifier>
             </configuration>
-          </execution>
-        </executions>
-      </plugin>
+        </plugin>
 				
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
