@@ -24,3 +24,18 @@ build:
   applicationConnectors:
     - type: http
       port: 7894
+push: 
+  steps:
+    — internal/docker-push: 
+        username: $DOCKERHUB_USERNAME
+        password: $DOCKERHUB_PASSWORD   
+        repository: $DOCKERHUB_REPOSITORY 
+        tag: v1
+        registry: https://registry.hub.docker.com/v2
+        cmd: java -jar /pipeline/source/target/wspdevops-0.0.1-SNAPSHOT.jar
+- kubectl: 
+    name: deploy to oke 
+    server: $OKE_URL 
+    token: $OKE_TOKEN 
+    insecure-skip-tls-verify: true 
+    command: apply -f $WERCKER_ROOT/kubernetes_deployment.yml — namespace=default
