@@ -1,0 +1,36 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+name: exemplo-k8s-deployment
+spec:
+selector:
+matchLabels:
+app: wspdevops
+replicas: 1 # deployment runs 1 pods matching the template
+template: # create pods using pod definition in this template
+metadata:
+labels:
+app: wspdevops
+spec:
+containers:
+- name: wspdevops
+image: iad.ocir.io/unimedbhcloud/helloworld:latest
+ports:
+- containerPort: 80
+imagePullSecrets:
+# enter the name of the secret you created
+- name: ocirsecret
+---
+apiVersion: v1
+kind: Service
+metadata:
+name: exemplo-k8s-service
+spec:
+type: NodePort #Exposes the service as a node port
+ports:
+- name: port1
+port: 80
+protocol: TCP
+targetPort: 80
+selector:
+app: wspdevops
