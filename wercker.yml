@@ -24,6 +24,7 @@ build:
   applicationConnectors:
     - type: http
       port: 7894
+
 push:
   steps:
     — internal/docker-push:
