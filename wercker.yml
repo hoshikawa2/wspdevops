@@ -24,7 +24,7 @@ push:
         repository: $DOCKER_REGISTRY/$DOCKER_REPO
         registry: https://$DOCKER_REGISTRY/v2
         tag: $WERCKER_GIT_BRANCH-$WERCKER_GIT_COMMIT
-        entrypoint: ["sh", "-c", "java", "-jar", "/pipeline/source/target/wspdevops-0.0.1-SNAPSHOT.jar"] 
+        entrypoint: java -Djava.security.egd=file:/dev/./urandom -jar /pipeline/source/target/wspdevops-0.0.1-SNAPSHOT.jar 
 
 #Deploy our container from the Oracle Container Registry to the Oracle Container Engine (Kubernetes)
 deploy-to-cluster:
