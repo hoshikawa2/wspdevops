@@ -21,7 +21,7 @@ push:
     - internal/docker-push:
         username: $DOCKERHUB_USERNAME
         password: $DOCKERHUB_PASSWORD
-        repository: $DOCKERHUB_REPOSITORY
+        repository: $DOCKERHUB_REPOSITORY/wspdevops
         registry: https://iad.ocir.io/v2/
         cmd: /bin/bash -c "java -jar /pipeline/source/target/wspdevops-0.0.1-SNAPSHOT.jar" 
   applicationConnectors:
