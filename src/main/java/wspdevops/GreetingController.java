@@ -72,7 +72,7 @@ public class GreetingController {
         try {
             OracleDataSource ods = new OracleDataSource();
 
-            if(false)
+            if(true)
             {
                 ods.setURL(DB_URL);    
                 ods.setConnectionProperties(info);
