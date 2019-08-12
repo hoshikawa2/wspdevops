@@ -10,7 +10,7 @@ box: debian
 # Read more about pipelines on our dev center
 # http://devcenter.wercker.com/docs/pipelines/index.html
 build:
-  box: maven:3.5.2-jdk-8
+  box: combient/java-mvn
   steps:
     - java/maven:
       goals: clean install
