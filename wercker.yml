@@ -17,6 +17,10 @@ build:
       settings: pom.xml
 
 push:
+  box:
+      id: openjdk
+      tag: 8-jre-alpine
+      cmd: /bin/sh
   steps:
     - internal/docker-push:
         username: $DOCKER_USERNAME
