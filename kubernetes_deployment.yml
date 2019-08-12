@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: wspdevops
-        image: ${DOCKER_REGISTRY}/${DOCKERHUB_REPOSITORY}:${WERCKER_GIT_BRANCH}-${WERCKER_GIT_COMMIT}
+        image: ${DOCKER_REGISTRY}/${DOCKER_REPO}:${WERCKER_GIT_BRANCH}-${WERCKER_GIT_COMMIT}
         imagePullPolicy: Always
         ports:
         - name: wspdevops
