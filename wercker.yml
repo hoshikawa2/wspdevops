@@ -57,11 +57,11 @@ deploy-to-cluster:
 
   - script:
       name: "Visualise Kubernetes config"
-      code: cat kubernetes_deployment.yml
+      code: cat kubernetes.yml
 
   - kubectl:
       name: deploy to kubernetes
       server: $KUBERNETES_MASTER
       token: $KUBERNETES_AUTH_TOKEN
       insecure-skip-tls-verify: true
-      command: apply -f $WERCKER_ROOT/kubernetes_deployment.yml
+      command: apply -f $WERCKER_ROOT/kubernetes.yml
