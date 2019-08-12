@@ -1,36 +1,43 @@
-apiVersion: apps/v1beta1
+apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
-name: exemplo-k8s-deployment
+  name: wspdevops
+  labels:
+    commit: ${WERCKER_GIT_COMMIT}
 spec:
-selector:
-matchLabels:
-app: wspdevops
-replicas: 1 # deployment runs 1 pods matching the template
-template: # create pods using pod definition in this template
-metadata:
-labels:
-app: wspdevops
-spec:
-containers:
-- name: wspdevops
-image: iad.ocir.io/unimedbhcloud/helloworld:latest
-ports:
-- containerPort: 80
-imagePullSecrets:
-# enter the name of the secret you created
-- name: ocirsecret
+  replicas: 2
+  selector:
+    matchLabels:
+      app: wspdevops
+  template:
+    metadata:
+      labels:
+        app: wspdevops
+        commit: ${WERCKER_GIT_COMMIT}
+    spec:
+      containers:
+      - name: wspdevops
+        image: ${DOCKER_REGISTRY}/${DOCKER_REPO}:${WERCKER_GIT_BRANCH}-${WERCKER_GIT_COMMIT}
+        imagePullPolicy: Always
+        ports:
+        - name: wspdevops
+          containerPort: 8080
+          protocol: TCP
+      imagePullSecrets:
+        - name: wercker
 ---
 apiVersion: v1
 kind: Service
 metadata:
-name: exemplo-k8s-service
+  name: wspdevops
+  labels:
+    app: wspdevops
+    commit: ${WERCKER_GIT_COMMIT}
 spec:
-type: NodePort #Exposes the service as a node port
-ports:
-- name: port1
-port: 80
-protocol: TCP
-targetPort: 80
-selector:
-app: wspdevops
+  ports:
+  - port: 30000
+    targetPort: 8080
+  selector:
+    app: wspdevops
+  type: ClusterIP
+---
