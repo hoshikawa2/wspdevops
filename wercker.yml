@@ -10,7 +10,7 @@ box: debian
 # Read more about pipelines on our dev center
 # http://devcenter.wercker.com/docs/pipelines/index.html
 build:
-  box: combient/java-mvn
+  box: maven:3.5.2-jdk-8
   steps:
     - java/maven:
       goals: clean install
@@ -24,13 +24,13 @@ push:
         repository: $DOCKER_REGISTRY/$DOCKER_REPO
         registry: https://$DOCKER_REGISTRY/v2
         tag: $WERCKER_GIT_BRANCH-$WERCKER_GIT_COMMIT
-        cmd: java -jar /pipeline/source/target/wspdevops-0.0.1-SNAPSHOT.jar 
+        cmd: /bin/bash -c "java -jar /pipeline/source/target/wspdevops-0.0.1-SNAPSHOT.jar" 
 
 #Deploy our container from the Oracle Container Registry to the Oracle Container Engine (Kubernetes)
 deploy-to-cluster:
   box:
       id: alpine
-      cmd: /bin/sh
+      cmd: /bin/bash
 
   steps:
 
