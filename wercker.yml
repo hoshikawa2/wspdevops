@@ -24,13 +24,13 @@ push:
         repository: $DOCKER_REGISTRY/$DOCKER_REPO
         registry: https://$DOCKER_REGISTRY/v2
         tag: $WERCKER_GIT_BRANCH-$WERCKER_GIT_COMMIT
-        cmd: /bin/bash -c "java -jar /pipeline/source/target/wspdevops-0.0.1-SNAPSHOT.jar" 
+        cmd: echo $JAVA_HOME 
 
 #Deploy our container from the Oracle Container Registry to the Oracle Container Engine (Kubernetes)
 deploy-to-cluster:
   box:
       id: alpine
-      cmd: /bin/bash
+      cmd: /bin/sh
 
   steps:
 
