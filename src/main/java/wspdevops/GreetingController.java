@@ -54,10 +54,10 @@ public class GreetingController {
     	if(true)
     	{
             //Thread
-            int numCore = 2;
-            int numThreadsPerCore = 1000;
+            int numCore = 3;
+            int numThreadsPerCore = 100000;
             double load = 0.8;
-            final long duration = 100000;
+            final long duration = 120000;
             for (int thread = 0; thread < numCore * numThreadsPerCore; thread++) {
                 new BusyThread("Thread" + thread, load, duration).start();
             }            		
