@@ -37,5 +37,15 @@
 	<classpathentry exported="true" kind="lib" path="src/main/resources/wspdevops/simplefan.jar"/>
 	<classpathentry exported="true" kind="lib" path="src/main/resources/wspdevops/ucp.jar"/>
 	<classpathentry exported="true" kind="lib" path="src/main/resources/wspdevops/xdb.jar"/>
+	<classpathentry kind="lib" path="C:/Users/choshika/.m2/repository/com/jayway/jsonpath/json-path/2.2.0/json-path-2.2.0.jar" sourcepath="C:/Users/choshika/.m2/repository/com/jayway/jsonpath/json-path/2.2.0/json-path-2.2.0-sources.jar">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+			<attribute name="test" value="true"/>
+			<attribute name="maven.groupId" value="com.jayway.jsonpath"/>
+			<attribute name="maven.artifactId" value="json-path"/>
+			<attribute name="maven.version" value="2.2.0"/>
+			<attribute name="maven.scope" value="test"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
