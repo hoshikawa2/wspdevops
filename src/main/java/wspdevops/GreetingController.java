@@ -1,6 +1,8 @@
 package wspdevops;
 
 import java.util.concurrent.atomic.AtomicLong;
+
+import org.springframework.core.convert.ConversionException;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -54,12 +56,11 @@ public class GreetingController {
     	if(true)
     	{
             //Thread
-            int numCore = 2;
-            int numThreadsPerCore = 2;
-            double load = 0.8;
-            final long duration = 100000;
-            for (int thread = 0; thread < numCore * numThreadsPerCore; thread++) {
-                new BusyThread("Thread" + thread, load, duration).start();
+            double load = 0;
+            final long duration = 1000000;
+            for (int thread = 0; thread < duration; thread++) {
+                new BusyThread(load).start();
+                load++;
             }            		
     	}
     	
@@ -138,7 +139,6 @@ public class GreetingController {
     //THREAD SOURCE-CODE
     private static class BusyThread extends Thread {
         private double load;
-        private long duration;
 
         /**
          * Constructor which creates the thread
@@ -146,10 +146,8 @@ public class GreetingController {
          * @param load Load % that this thread should generate
          * @param duration Duration that this thread should generate the load for
          */
-        public BusyThread(String name, double load, long duration) {
-            super(name);
+        public BusyThread(double load) {
             this.load = load;
-            this.duration = duration;
         }
 
         /**
@@ -157,21 +155,12 @@ public class GreetingController {
          */
         @Override
         public void run() {
-            long startTime = System.currentTimeMillis();
             try {
-                // Loop for the given duration
-                while (System.currentTimeMillis() - startTime < duration) {
-                    // Every 100ms, sleep for the percentage of unladen time
-                    if (System.currentTimeMillis() % 100 == 0) {
-                        Thread.sleep((long) Math.floor((1 - load) * 100));
-                    }
-                    // call ATP
-                	startATP();
-
-                }
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
+	                // call ATP
+	            	startATP();
+                } finally {
+					System.out.println("Final da query: " + Double.toString(load));
+				}
         }
     }
     
