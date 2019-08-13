@@ -53,14 +53,7 @@ public class GreetingController {
 
     	if(true)
     	{
-            //Thread
-            int numCore = 3;
-            int numThreadsPerCore = 100000;
-            double load = 0.8;
-            final long duration = 120000;
-            for (int thread = 0; thread < numCore * numThreadsPerCore; thread++) {
-                new BusyThread("Thread" + thread, load, duration).start();
-            }            		
+            new BusyThread().start();
     	}
     	
     	return new Greeting(counter.incrementAndGet(),
@@ -89,13 +82,13 @@ public class GreetingController {
                 try (OracleConnection connection = (OracleConnection) ods.getConnection()) {
                   // Get the JDBC driver name and version 
                   DatabaseMetaData dbmd = connection.getMetaData();       
-                  System.out.println("Driver Name: " + dbmd.getDriverName());
-                  System.out.println("Driver Version: " + dbmd.getDriverVersion());
+                  //System.out.println("Driver Name: " + dbmd.getDriverName());
+                  //System.out.println("Driver Version: " + dbmd.getDriverVersion());
                   // Print some connection properties
-                  System.out.println("Default Row Prefetch Value is: " + 
+                  //System.out.println("Default Row Prefetch Value is: " + 
                      connection.getDefaultRowPrefetch());
-                  System.out.println("Database Username is: " + connection.getUserName());
-                  System.out.println();
+                  //System.out.println("Database Username is: " + connection.getUserName());
+                  //System.out.println();
                   // Perform a database operation 
                   printEmployees(connection);
                   //createEmployees(connection);
@@ -137,19 +130,8 @@ public class GreetingController {
     
     //THREAD SOURCE-CODE
     private static class BusyThread extends Thread {
-        private double load;
-        private long duration;
 
-        /**
-         * Constructor which creates the thread
-         * @param name Name of this thread
-         * @param load Load % that this thread should generate
-         * @param duration Duration that this thread should generate the load for
-         */
-        public BusyThread(String name, double load, long duration) {
-            super(name);
-            this.load = load;
-            this.duration = duration;
+        public BusyThread() {
         }
 
         /**
@@ -157,19 +139,14 @@ public class GreetingController {
          */
         @Override
         public void run() {
-            long startTime = System.currentTimeMillis();
             try {
                 // Loop for the given duration
-                while (System.currentTimeMillis() - startTime < duration) {
-                    // Every 100ms, sleep for the percentage of unladen time
-                    if (System.currentTimeMillis() % 100 == 0) {
-                        Thread.sleep((long) Math.floor((1 - load) * 100));
-                    }
+                while (true) {
                     // call ATP
                 	startATP();
 
                 }
-            } catch (InterruptedException e) {
+            } catch (Exception e) {
                 e.printStackTrace();
             }
         }
