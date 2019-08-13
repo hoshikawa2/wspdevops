@@ -42,16 +42,16 @@ public class GreetingController {
     @RequestMapping("/greeting")
     public Greeting greeting(@RequestParam(value="name", defaultValue="World") String name) {   
 
-    	if(false)
+    	if(true)
     	{
 
-    		//System.out.println("Working Directory = " +
-    	    //          System.getProperty("user.dir"));
+    		System.out.println("Working Directory = " +
+    	              System.getProperty("user.dir"));
             
     		startATP();    		
     	}
 
-    	if(true)
+    	if(false)
     	{
             //Thread
             int numCore = 2;
