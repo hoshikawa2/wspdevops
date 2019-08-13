@@ -101,7 +101,7 @@
                      <artifactId>Wallet_atp</artifactId>
                                    <version>1.0</version>
                                    <scope>system</scope>
-                     <systemPath>${basedir}/src/main/resources/wspdevops/Wallet_atp.zip</systemPath>
+                     <systemPath>${basedir}/src/main/resources/wallet_atp/Wallet_atp.zip</systemPath>
               </dependency>
               
 		<dependency>
