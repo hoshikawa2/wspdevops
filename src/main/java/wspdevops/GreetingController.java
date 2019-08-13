@@ -86,7 +86,7 @@ public class GreetingController {
                   //System.out.println("Driver Version: " + dbmd.getDriverVersion());
                   // Print some connection properties
                   //System.out.println("Default Row Prefetch Value is: " + 
-                     connection.getDefaultRowPrefetch());
+                  //   connection.getDefaultRowPrefetch());
                   //System.out.println("Database Username is: " + connection.getUserName());
                   //System.out.println();
                   // Perform a database operation 
