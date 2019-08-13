@@ -27,10 +27,10 @@ public class GreetingController {
 
     public static String msg = System.getenv("MSG");
      
-    final static String DB_URL="jdbc:oracle:thin:@wallet_atp?TNS_ADMIN=/src/main/resources/wallet_atp"; 
+    //final static String DB_URL="jdbc:oracle:thin:@atp_medium?TNS_ADMIN=/src/main/resources/wallet_atp"; 
     //DB_URL= "jdbc:oracle:thin:@adb.us-ashburn-1.oraclecloud.com:1522/raqdkqsvxzgrlb9_atp_high.atp.oraclecloud.com:1521/atp";
     // For ATP and ADW - use the TNS Alias name along with the TNS_ADMIN when using 18.3 JDBC driver
-    //final static String DB_URL="jdbc:oracle:thin:@wallet_atp?TNS_ADMIN=../classes/";
+    final static String DB_URL="jdbc:oracle:thin:@atp_tpurgent?TNS_ADMIN=./classes/wallet_atp";
     // In case of windows, use the following URL 
     // final static String DB_URL="jdbc:oracle:thin:@wallet_dbname?TNS_ADMIN=C:\\Users\\test\\wallet_dbname";
     final static String DB_USER = "admin";
@@ -38,22 +38,6 @@ public class GreetingController {
   
     public String template = msg + ", %s!";
     private final AtomicLong counter = new AtomicLong();
-
-    public static void search(final String pattern, final File folder, List<String> result) {
-        for (final File f : folder.listFiles()) {
-
-            if (f.isDirectory()) {
-                search(pattern, f, result);
-            }
-
-            if (f.isFile()) {
-                if (f.getName().matches(pattern)) {
-                    result.add(f.getAbsolutePath());
-                }
-            }
-
-        }
-    }    
     
     @RequestMapping("/greeting")
     public Greeting greeting(@RequestParam(value="name", defaultValue="World") String name) {   
@@ -61,15 +45,8 @@ public class GreetingController {
     	if(true)
     	{
 
-            final File folder = new File("./");
-
-            List<String> result = new ArrayList<>();
-
-            search(".*\\.sso", folder, result);
-
-            for (String s : result) {
-                System.out.println(s);
-            }
+    		//System.out.println("Working Directory = " +
+    	    //          System.getProperty("user.dir"));
             
     		startATP();    		
     	}
@@ -120,8 +97,8 @@ public class GreetingController {
                   System.out.println("Database Username is: " + connection.getUserName());
                   System.out.println();
                   // Perform a database operation 
-                  //printEmployees(connection);
-                  createEmployees(connection);
+                  printEmployees(connection);
+                  //createEmployees(connection);
                 }     	        	
             	
             }
