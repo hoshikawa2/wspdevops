@@ -27,10 +27,10 @@ public class GreetingController {
 
     public static String msg = System.getenv("MSG");
      
-    //final static String DB_URL="jdbc:oracle:thin:@tcps://adb.us-ashburn-1.oraclecloud.com:1522/raqdkqsvxzgrlb9_atp_high.atp.oraclecloud.com?TNS_ADMIN=/src/main/resources/wallet_atp"; 
+    final static String DB_URL="jdbc:oracle:thin:@tcps://adb.us-ashburn-1.oraclecloud.com:1522/raqdkqsvxzgrlb9_atp_high.atp.oraclecloud.com?TNS_ADMIN=../classes/wallet_atp"; 
     //DB_URL= "jdbc:oracle:thin:@adb.us-ashburn-1.oraclecloud.com:1522/raqdkqsvxzgrlb9_atp_high.atp.oraclecloud.com:1521/atp";
     // For ATP and ADW - use the TNS Alias name along with the TNS_ADMIN when using 18.3 JDBC driver
-    final static String DB_URL="jdbc:oracle:thin:@wallet_atp?TNS_ADMIN=../classes/";
+    //final static String DB_URL="jdbc:oracle:thin:@wallet_atp?TNS_ADMIN=../classes/";
     // In case of windows, use the following URL 
     // final static String DB_URL="jdbc:oracle:thin:@wallet_dbname?TNS_ADMIN=C:\\Users\\test\\wallet_dbname";
     final static String DB_USER = "admin";
