@@ -95,6 +95,14 @@
                                    <scope>system</scope>
                      <systemPath>${basedir}/src/main/resources/wspdevops/xdb.jar</systemPath>
               </dependency>
+
+              <dependency>
+                     <groupId>wallet</groupId>
+                     <artifactId>Wallet_atp</artifactId>
+                                   <version>1.0</version>
+                                   <scope>system</scope>
+                     <systemPath>${basedir}/src/main/resources/wspdevops/Wallet_atp.zip</systemPath>
+              </dependency>
               
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -117,6 +125,7 @@
     <includeSystemScope>true</includeSystemScope>
   </configuration>
 </plugin>		
+
 
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
